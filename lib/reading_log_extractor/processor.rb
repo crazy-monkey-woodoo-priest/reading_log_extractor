@@ -27,7 +27,10 @@ module ReadingLogExtractor
         when ->(ary) { ary.empty? }
           false
         when ->(ary) { list_has_reponame?(list) }
-          true
+          repo = list.lazy.select { |e| e.name == reponame }.first
+          repo.fork # true if it's a forked project
+                    # in future gem will ensure weather the for is for
+                    # of had-read/reading-log
         else
           find_repo(list.next_page)
         end

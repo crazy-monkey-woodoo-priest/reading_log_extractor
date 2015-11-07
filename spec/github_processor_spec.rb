@@ -15,6 +15,14 @@ RSpec.describe ReadingLogExtractor::Processor do
       end
     end
 
+    context 'Given user has irelevant reading-log repo' do
+      let(:usecase) { 'user-with-valid-irelevant-repo' }
+
+      it 'should return true' do
+        expect(subject.repo_exist?).to be false
+      end
+    end
+
     context 'Given user without reading-log repo' do
       let(:usecase) { 'user-without-repo' }
 

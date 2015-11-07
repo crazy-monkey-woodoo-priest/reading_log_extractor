@@ -1,7 +1,7 @@
 require_relative 'dummy_repo_list_facade/list'
 
 class DummyRepoListFacade
-  Repo = Struct.new(:name)
+  Repo = Struct.new(:name, :fork)
 
   attr_reader :usecase
 
@@ -18,14 +18,17 @@ class DummyRepoListFacade
       case usecase
       when 'user-with-valid-repo'
         [
-          [DummyRepoListFacade::Repo.new('dummy 1'), DummyRepoListFacade::Repo.new('dummy 2')],
-          [DummyRepoListFacade::Repo.new('reading-log')],
-          []
+          [DummyRepoListFacade::Repo.new('dummy 1', true), DummyRepoListFacade::Repo.new('dummy 2', true)],
+          [DummyRepoListFacade::Repo.new('reading-log', true)]
+        ]
+      when 'user-with-valid-irelevant-repo'
+        [
+          [DummyRepoListFacade::Repo.new('dummy 1',true), DummyRepoListFacade::Repo.new('reading-log', false)],
         ]
       when 'user-without-repo'
         [
-          [DummyRepoListFacade::Repo.new('dummy 1'), DummyRepoListFacade::Repo.new('dummy 2')],
-          [DummyRepoListFacade::Repo.new('dummy 3')],
+          [DummyRepoListFacade::Repo.new('dummy 1', false), DummyRepoListFacade::Repo.new('dummy 2', true)],
+          [DummyRepoListFacade::Repo.new('dummy 3', true)],
           []
         ]
       else
