@@ -4,5 +4,6 @@ source 'https://rubygems.org'
 gemspec
 
 group :test do
-  gem 'pry'
+  gem "codeclimate-test-reporter", require: nil
+  gem 'pry', require: nil
 end

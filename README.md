@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/had-read/reading_log_extractor.svg)](https://travis-ci.org/had-read/reading_log_extractor)
+[![Code Climate](https://codeclimate.com/github/had-read/reading_log_extractor/badges/gpa.svg)](https://codeclimate.com/github/had-read/reading_log_extractor)
+[![Test Coverage](https://codeclimate.com/github/had-read/reading_log_extractor/badges/coverage.svg)](https://codeclimate.com/github/had-read/reading_log_extractor/coverage)
+
 # ReadingLogExtractor
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/reading_log_extractor`. To experiment with that code, run `bin/console` for an interactive prompt.
