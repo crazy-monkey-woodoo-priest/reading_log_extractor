@@ -5,7 +5,7 @@ module ReadingLogExtractor
     def initialize(username:, gh_facade:)
       @gh_facade = gh_facade
       @username = username
-      @reponame = 'reading-log'
+      @reponame = ReadingLogExtractor.config.reponame
       @mutex = Mutex.new
     end
 
