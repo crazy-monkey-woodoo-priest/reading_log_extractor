@@ -16,5 +16,12 @@ module ReadingLogExtractor
         .commits
         .list(username, repo)
     end
+
+    def content_between(username, reponame, sha1, sha2)
+      gh_connection
+        .repos
+        .commits
+        .compare(username, reponame, sha1, sha2)
+    end
   end
 end

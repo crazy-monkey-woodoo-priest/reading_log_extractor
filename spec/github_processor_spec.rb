@@ -49,9 +49,7 @@ RSpec.describe ReadingLogExtractor::Processor, integration: true do
   end
 
   describe '#latest_commits', vcr: { cassette_name: "github-commits" } do
-    subject (:latest_commits) do
-      processor.latest_commits(sha)
-    end
+    subject (:latest_commits) { processor.latest_commits(sha) }
 
     let(:expected_shas) { JSON.parse(File.read Tests.fixtures_file('shas-list.json')) }
     let(:sha) { '27ae6a97f5783acd2e35ea7bacadbbf8419c1958' }
@@ -76,6 +74,29 @@ RSpec.describe ReadingLogExtractor::Processor, integration: true do
 
       it 'should include all commits' do
         expect(subject.map(&:sha)).to match(expected_shas)
+      end
+    end
+  end
+
+  describe '#content' do
+    subject { processor.content(sha1, sha2) }
+
+    context 'commit withot file change', vcr: { cassette_name: "github-content-withotu-file-change" } do
+      let(:sha1) { '419350cfa751825c9c253a3a0ff215df4a809e25' }
+      let(:sha2) { 'cdd7aacc9cdd1021083dc39dc2810fc3bc9cacac' }
+
+      it do
+        expect(subject).to be nil
+      end
+    end
+
+    context 'commit with file change', vcr: { cassette_name: "github-content-with-file-change" } do
+      let(:sha1) { '0348b915790de426aacbcd4a1094f9a80f1a8fc3' }
+      let(:sha2) { '0c3ac7d2148299252fa3ef39c5f20f8b3a95c981' }
+      let(:expected_diff) { File.read(Tests.fixtures_file('diffs/file-diff-1')) }
+
+      it 'should eq raw diff text' do
+        expect(subject).to eq expected_diff
       end
     end
   end

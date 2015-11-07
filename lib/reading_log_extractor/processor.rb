@@ -32,6 +32,15 @@ module ReadingLogExtractor
       end
     end
 
+    def content(sha1, sha2)
+      gh_facade
+        .content_between(username, reponame, sha1, sha2)
+        .files
+        .select {|f| f.filename == 'reading-log.md'  }
+        .map(&:patch)
+        .first
+    end
+
     private
       attr_reader :mutex
 

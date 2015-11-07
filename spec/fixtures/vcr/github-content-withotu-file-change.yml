@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/equivalent/reading-log/compare/419350cfa751825c9c253a3a0ff215df4a809e25...cdd7aacc9cdd1021083dc39dc2810fc3bc9cacac
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github API Ruby Gem 0.12.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Sat, 07 Nov 2015 19:55:41 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '45'
+      X-Ratelimit-Reset:
+      - '1446927347'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Etag:
+      - W/"a39e1e57143a90dccb8999ef610f8998"
+      Vary:
+      - Accept
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Served-By:
+      - 7f48e2f7761567e923121f17538d7a6d
+      X-Github-Request-Id:
+      - 540D3EFE:146C8:145BD242:563E573D
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https://api.github.com/repos/equivalent/reading-log/compare/419350cfa751825c9c253a3a0ff215df4a809e25...cdd7aacc9cdd1021083dc39dc2810fc3bc9cacac","html_url":"https://github.com/equivalent/reading-log/compare/419350cfa751825c9c253a3a0ff215df4a809e25...cdd7aacc9cdd1021083dc39dc2810fc3bc9cacac","permalink_url":"https://github.com/equivalent/reading-log/compare/equivalent:419350c...equivalent:cdd7aac","diff_url":"https://github.com/equivalent/reading-log/compare/419350cfa751825c9c253a3a0ff215df4a809e25...cdd7aacc9cdd1021083dc39dc2810fc3bc9cacac.diff","patch_url":"https://github.com/equivalent/reading-log/compare/419350cfa751825c9c253a3a0ff215df4a809e25...cdd7aacc9cdd1021083dc39dc2810fc3bc9cacac.patch","base_commit":{"sha":"419350cfa751825c9c253a3a0ff215df4a809e25","commit":{"author":{"name":"Tomas
+        Valent","email":"equivalent@eq8.eu","date":"2014-11-18T19:21:19Z"},"committer":{"name":"Tomas
+        Valent","email":"equivalent@eq8.eu","date":"2014-11-18T19:21:19Z"},"message":"demo
+        articles","tree":{"sha":"9787fd9febcb2ef4af610fd6c3e59ced7458129f","url":"https://api.github.com/repos/equivalent/reading-log/git/trees/9787fd9febcb2ef4af610fd6c3e59ced7458129f"},"url":"https://api.github.com/repos/equivalent/reading-log/git/commits/419350cfa751825c9c253a3a0ff215df4a809e25","comment_count":0},"url":"https://api.github.com/repos/equivalent/reading-log/commits/419350cfa751825c9c253a3a0ff215df4a809e25","html_url":"https://github.com/equivalent/reading-log/commit/419350cfa751825c9c253a3a0ff215df4a809e25","comments_url":"https://api.github.com/repos/equivalent/reading-log/commits/419350cfa751825c9c253a3a0ff215df4a809e25/comments","author":{"login":"equivalent","id":721990,"avatar_url":"https://avatars.githubusercontent.com/u/721990?v=3","gravatar_id":"","url":"https://api.github.com/users/equivalent","html_url":"https://github.com/equivalent","followers_url":"https://api.github.com/users/equivalent/followers","following_url":"https://api.github.com/users/equivalent/following{/other_user}","gists_url":"https://api.github.com/users/equivalent/gists{/gist_id}","starred_url":"https://api.github.com/users/equivalent/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/equivalent/subscriptions","organizations_url":"https://api.github.com/users/equivalent/orgs","repos_url":"https://api.github.com/users/equivalent/repos","events_url":"https://api.github.com/users/equivalent/events{/privacy}","received_events_url":"https://api.github.com/users/equivalent/received_events","type":"User","site_admin":false},"committer":{"login":"equivalent","id":721990,"avatar_url":"https://avatars.githubusercontent.com/u/721990?v=3","gravatar_id":"","url":"https://api.github.com/users/equivalent","html_url":"https://github.com/equivalent","followers_url":"https://api.github.com/users/equivalent/followers","following_url":"https://api.github.com/users/equivalent/following{/other_user}","gists_url":"https://api.github.com/users/equivalent/gists{/gist_id}","starred_url":"https://api.github.com/users/equivalent/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/equivalent/subscriptions","organizations_url":"https://api.github.com/users/equivalent/orgs","repos_url":"https://api.github.com/users/equivalent/repos","events_url":"https://api.github.com/users/equivalent/events{/privacy}","received_events_url":"https://api.github.com/users/equivalent/received_events","type":"User","site_admin":false},"parents":[{"sha":"cdd7aacc9cdd1021083dc39dc2810fc3bc9cacac","url":"https://api.github.com/repos/equivalent/reading-log/commits/cdd7aacc9cdd1021083dc39dc2810fc3bc9cacac","html_url":"https://github.com/equivalent/reading-log/commit/cdd7aacc9cdd1021083dc39dc2810fc3bc9cacac"}]},"merge_base_commit":{"sha":"cdd7aacc9cdd1021083dc39dc2810fc3bc9cacac","commit":{"author":{"name":"Tomas
+        Valent","email":"equivalent@eq8.eu","date":"2014-11-18T19:20:47Z"},"committer":{"name":"Tomas
+        Valent","email":"equivalent@eq8.eu","date":"2014-11-18T19:20:47Z"},"message":"main
+        reading log files","tree":{"sha":"2fcca6feeac48a0279c7bf93797c9553ad42ca33","url":"https://api.github.com/repos/equivalent/reading-log/git/trees/2fcca6feeac48a0279c7bf93797c9553ad42ca33"},"url":"https://api.github.com/repos/equivalent/reading-log/git/commits/cdd7aacc9cdd1021083dc39dc2810fc3bc9cacac","comment_count":0},"url":"https://api.github.com/repos/equivalent/reading-log/commits/cdd7aacc9cdd1021083dc39dc2810fc3bc9cacac","html_url":"https://github.com/equivalent/reading-log/commit/cdd7aacc9cdd1021083dc39dc2810fc3bc9cacac","comments_url":"https://api.github.com/repos/equivalent/reading-log/commits/cdd7aacc9cdd1021083dc39dc2810fc3bc9cacac/comments","author":{"login":"equivalent","id":721990,"avatar_url":"https://avatars.githubusercontent.com/u/721990?v=3","gravatar_id":"","url":"https://api.github.com/users/equivalent","html_url":"https://github.com/equivalent","followers_url":"https://api.github.com/users/equivalent/followers","following_url":"https://api.github.com/users/equivalent/following{/other_user}","gists_url":"https://api.github.com/users/equivalent/gists{/gist_id}","starred_url":"https://api.github.com/users/equivalent/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/equivalent/subscriptions","organizations_url":"https://api.github.com/users/equivalent/orgs","repos_url":"https://api.github.com/users/equivalent/repos","events_url":"https://api.github.com/users/equivalent/events{/privacy}","received_events_url":"https://api.github.com/users/equivalent/received_events","type":"User","site_admin":false},"committer":{"login":"equivalent","id":721990,"avatar_url":"https://avatars.githubusercontent.com/u/721990?v=3","gravatar_id":"","url":"https://api.github.com/users/equivalent","html_url":"https://github.com/equivalent","followers_url":"https://api.github.com/users/equivalent/followers","following_url":"https://api.github.com/users/equivalent/following{/other_user}","gists_url":"https://api.github.com/users/equivalent/gists{/gist_id}","starred_url":"https://api.github.com/users/equivalent/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/equivalent/subscriptions","organizations_url":"https://api.github.com/users/equivalent/orgs","repos_url":"https://api.github.com/users/equivalent/repos","events_url":"https://api.github.com/users/equivalent/events{/privacy}","received_events_url":"https://api.github.com/users/equivalent/received_events","type":"User","site_admin":false},"parents":[]},"status":"behind","ahead_by":0,"behind_by":1,"total_commits":0,"commits":[],"files":[]}'
+    http_version: 
+  recorded_at: Sat, 07 Nov 2015 19:55:41 GMT
+recorded_with: VCR 3.0.0
