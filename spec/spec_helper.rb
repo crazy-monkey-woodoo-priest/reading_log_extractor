@@ -12,6 +12,10 @@ module Tests
     specs_root.join('fixtures')
   end
 
+  def self.fixtures_file(file)
+    fixtures.join(file).to_s
+  end
+
   def self.specs_root
     project_root.join('spec')
   end
@@ -33,4 +37,12 @@ VCR.configure do |config|
 end
 
 RSpec.configure do |config|
+end
+
+def disable_vcr
+  WebMock.allow_net_connect!
+  VCR.turn_off!
+  yield
+  VCR.turn_on!
+  WebMock.disable_net_connect!
 end
