@@ -51,14 +51,13 @@ RSpec.describe ReadingLogExtractor::Processor, integration: true do
   end
 
   describe '#latest_commits', vcr: { cassette_name: "github-commits" } do
-    context 'Given user with valid reading-log repo' do
-
       subject (:latest_commits) do
-        processor.latest_commits('27ae6a97f5783acd2e35ea7bacadbbf8419c1958')
+        processor.latest_commits(sha)
       end
 
       let(:expected_shas) { JSON.parse(File.read Tests.fixtures_file('shas-list.json')) }
       let(:username) { 'equivalent' }
+      let(:sha) { '27ae6a97f5783acd2e35ea7bacadbbf8419c1958' }
 
       it 'list of commits should match the sha list' do
         expect(subject.map(&:sha)).to match_array(expected_shas)
@@ -72,6 +71,15 @@ RSpec.describe ReadingLogExtractor::Processor, integration: true do
         it { expect(subject.author).to eq 'equivalent' }
         it { expect(subject.date).to eq '2015-11-04T08:12:44Z' }
       end
-    end
+
+      context 'there is no last sha', vcr: { cassette_name: "github-commits-fresh-clone" } do
+        let(:username) { 'had-read' }
+        let(:sha) { nil }
+        let(:expected_shas) { JSON.parse(File.read Tests.fixtures_file('fresh-clone-sha-list.json')) }
+
+        it 'should include all commits' do
+          expect(subject.map(&:sha)).to match(expected_shas)
+        end
+      end
   end
 end

@@ -69,7 +69,10 @@ module ReadingLogExtractor
             end
           end
 
-        fetch_commits(commits.next_page, sha, collection) unless limit_reached
+        if !limit_reached && !(next_page = commits.next_page).nil?
+          fetch_commits(next_page, sha, collection)
+        end
+
         collection
       end
 
