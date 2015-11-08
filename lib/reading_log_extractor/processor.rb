@@ -1,13 +1,14 @@
 module ReadingLogExtractor
   class Processor
     class Commit
-      attr_reader :sha, :message, :author, :date
+      attr_reader :sha, :message, :author, :date, :avatar
 
-      def initialize(sha:, message:, author:, date:)
+      def initialize(sha:, message:, author:, date:, avatar:)
         @sha = sha
         @message = message
         @author = author
         @date = date
+        @avatar = avatar
       end
     end
 
@@ -89,6 +90,7 @@ module ReadingLogExtractor
           Commit.new(sha: gh_commit.sha,
             message: gh_commit.commit.message,
             author:  gh_commit.author.login,
+            avatar:  gh_commit.author.avatar_url,
             date:    gh_commit.commit.author.date )
         end
   end

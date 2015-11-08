@@ -64,6 +64,7 @@ RSpec.describe ReadingLogExtractor::Processor, integration: true do
       it { expect(subject.sha).to eq 'd7812cad66d725b43c0a362f2fd318487bbb1cae' }
       it { expect(subject.message).to eq 'Update reading-log.md' }
       it { expect(subject.author).to eq 'equivalent' }
+      it { expect(subject.avatar).to eq 'https://avatars.githubusercontent.com/u/721990?v=3' }
       it { expect(subject.date).to eq '2015-11-04T08:12:44Z' }
     end
 
