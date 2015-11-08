@@ -3,7 +3,6 @@ require 'uri'
 require "reading_log_extractor/version"
 require "reading_log_extractor/github_facade"
 require "reading_log_extractor/processor"
-require "reading_log_extractor/parser"
 
 module ReadingLogExtractor
   class Config
