@@ -95,7 +95,7 @@ RSpec.describe ReadingLogExtractor::Processor, integration: true do
       let(:sha2) { '0c3ac7d2148299252fa3ef39c5f20f8b3a95c981' }
       let(:expected_diff) { File.read(Tests.fixtures_file('diffs/file-diff-1')) }
 
-      it 'should eq raw diff text' do
+      it 'should eq the raw diff text' do
         expect(subject).to eq expected_diff
       end
     end
