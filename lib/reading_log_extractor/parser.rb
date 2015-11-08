@@ -12,9 +12,9 @@ class Parser
     @mutex.synchronize do
       raw_content.each_line do |line|
         case line
-        when /^\+/
+        when /^[+]\*/
           additions << parse_line(line)
-        when /^\-/
+        when /^[-]\*/
           removals << parse_line(line)
         else
         end
@@ -24,6 +24,8 @@ class Parser
 
   private
     def parse_line(line)
-      { url: URI.extract(line).first, message: line.match(/\s+#(.*)$/)[1].strip }
+      message = (msg = line.match(/\s+#(.*)$/)) ? msg[1].strip : nil
+      url = URI.extract(line).first
+      { url: url, message: message }
     end
 end
