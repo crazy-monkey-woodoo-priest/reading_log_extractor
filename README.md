@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/had-read/reading_log_extractor.svg)](https://travis-ci.org/had-read/reading_log_extractor)
 [![Code Climate](https://codeclimate.com/github/had-read/reading_log_extractor/badges/gpa.svg)](https://codeclimate.com/github/had-read/reading_log_extractor)
 [![Test Coverage](https://codeclimate.com/github/had-read/reading_log_extractor/badges/coverage.svg)](https://codeclimate.com/github/had-read/reading_log_extractor/coverage)
+![Gitten](http://gittens.r15.railsrumble.com//badge/had-read/reading-log)
 
 # ReadingLogExtractor
 
